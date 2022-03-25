@@ -1,0 +1,37 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "./js/jquery-3.3.1.min.js", "./js/background.min.js", "./js/bgCheckPage.min.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "./images/sup_128.png",
+         "16": "./images/sup_16.png",
+         "32": "./images/sup_32.png",
+         "48": "./images/sup_48.png"
+      },
+      "default_popup": "./popup.html"
+   },
+   "content_scripts": [ {
+      "css": [ "./css/front-ui.css" ],
+      "js": [ "./js/jquery-3.3.1.min.js", "./js/autoEntry.min.js" ],
+      "matches": [ "https://japan.supremenewyork.com/" ]
+   }, {
+      "css": [ "./css/front-ui.css" ],
+      "js": [ "./js/jquery-3.3.1.min.js", "./js/autoEntryComplete.min.js" ],
+      "matches": [ "https://japan.supremenewyork.com/complete", "https://japan.supremenewyork.com/complete/" ]
+   } ],
+   "description": "SupremeJP in-store raffle auto entry extension by SN1R. AMJP Member Exclusive.",
+   "icons": {
+      "128": "./images/sup_128.png",
+      "16": "./images/sup_16.png",
+      "32": "./images/sup_32.png",
+      "48": "./images/sup_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzCbWOFFKo9Qp/nI9fdIlhQIwtOIxqpICtdFJXeVab0PuOrCWcFe9e4gSz1/cXMqYXUt9GjZVM5u3nMpCbbza15gXTTSZxB8bQupxLo+c5ZOmmhG38mMqKQ0wksJdmEuDiciXKAEG3hWxk2rv5vCH2ESzKwLQ/wHdf84+Obnp7JNhiA10ye0Vc6NV8LJy1q9lla4yrDAcTC2vqwZ3auIzeI+T+GL7vl295e9TJDEIopPgnUHcNz8TvX3/xmYTW0zitqRygc0aftrjUWKXkomtKM0YTER0wlwxGvWbXf9syqTugY5gx6THAGdoga7nITWcODVZn+uTsjMS/eJSZMeuewIDAQAB",
+   "manifest_version": 2,
+   "name": "SupremeJP In-store Raffle Auto Entry",
+   "permissions": [ "storage", "tabs", "webRequest", "https://japan.supremenewyork.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.2.0.14"
+}
